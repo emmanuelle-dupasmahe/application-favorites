@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out; /*animation lors du changement de page*/
+}
+/*pour une animation lors du changement de page*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+header, footer {
+    background-color: #4b14b1;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header nav, footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    flex-wrap: wrap;
+    padding: 0 20px; /* Ajoute un peu de padding sur les côtés pour que le logo ne colle pas au bord */
+}
+header nav a, footer nav a {
+    color: #e0e0e0; /*la couleur est un peu grise aavant le survol comme sur le site officiel*/
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease; 
+}
+
+header nav a:hover, footer nav a:hover {
+    color: white; /* Change la couleur au survol (blanc) */
+}
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
+}
