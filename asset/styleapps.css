@@ -38,3 +38,99 @@ main {
     padding: 20px;
     min-height: calc(100vh - 120px); /* Pour que le footer reste en bas */
 }
+/* Styles généraux pour le corps de la page app1*/
+.body2 {
+    background-color: #ECE5DD; /* Le fond beige de l'interface WhatsApp */
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1.5s ease-in-out; /*animation lors du changement de page*/
+}
+/*pour une animation lors du changement de page*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+header, footer {
+    background-color: #4b14b1;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header nav, footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    flex-wrap: wrap;
+    padding: 0 20px; /* Ajoute un peu de padding sur les côtés pour que le logo ne colle pas au bord */
+}
+header nav a, footer nav a {
+    color: #e0e0e0; /*la couleur est un peu grise aavant le survol comme sur le site officiel*/
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease; 
+}
+
+header nav a:hover, footer nav a:hover {
+    color: white; /* Change la couleur au survol (blanc) */
+}
+
+/* Conteneur de la page WhatsApp */
+.whatsapp-page {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #E6DCD1; /* Une couleur un peu plus foncée pour la zone de chat */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+h2 {
+    color:black;
+}
+
+/* En-tête de la conversation*/
+.chat-header {
+    background-color: white; /* La couleur de la barre supérieure de WhatsApp */
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Conteneur des messages */
+.chat-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image:url('../asset/images/fond-whatsapp.jpg');
+    background-size: cover; /* L'image couvre tout le conteneur */
+    background-repeat: no-repeat; /* L'image ne se répéte pas */
+    background-position: center; 
+}
+
+/* Styles pour une bulle de message */
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    word-wrap: break-word; /* Pour les longs messages */
+}
+
+/* Styles pour les messages envoyés par l'utilisateur (bleu/vert) */
+.message.sent {
+    background-color: #D9FDD3; /* La couleur des bulles de messages envoyés */
+    align-self: flex-end; /* Aligner à droite */
+}
+
+/* Styles pour les messages reçus (gris) */
+.message.received {
+    background-color: #FFFFFF; /* La couleur des bulles de messages reçus */
+    align-self: flex-start; /* Aligner à gauche */
+}
